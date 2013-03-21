@@ -1,8 +1,6 @@
 # ColdFusion 10 Vagrant Environment
 This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www.adobe.com/products/coldfusion-family.html) development.
 
-There are two Vagrantfiles for this project depending on how you are managing your Vagrant environments. 
-
 ## Prerequietes
 1. [Vagrant](http://downloads.vagrantup.com) installed
  - Requires [VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed
@@ -26,6 +24,7 @@ There are two Vagrantfiles for this project depending on how you are managing yo
   - [http://192.168.33.10/mxunit/](http://192.168.33.10/mxunit/)
 
 For example:
+
     $ git clone git@github.com:mhenke/vagrant-cf10.git
     $ cd /vagrant-cf10
     $ cp Vagrantfile.librarian Vagrantfile
