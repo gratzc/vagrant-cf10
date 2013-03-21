@@ -13,17 +13,21 @@ Vagrant::Config.run do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
-     
+
     # core cf10 on apache
-    
+
     chef.add_recipe "apt"
     chef.add_recipe "rng-tools"
     chef.add_recipe "java"
+    chef.add_recipe "ant"
+    chef.add_recipe "git"
+    chef.add_recipe "vim"
     chef.add_recipe "apache2"
     chef.add_recipe "apache2::mod_ssl"
     chef.add_recipe "coldfusion10"
     chef.add_recipe "coldfusion10::apache"
     chef.add_recipe "mxunit"
+    # chef.add_recipe "cloudy"
 
     chef.json = {
 
