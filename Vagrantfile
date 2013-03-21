@@ -27,7 +27,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "coldfusion10"
     chef.add_recipe "coldfusion10::apache"
     chef.add_recipe "mxunit"
-    # chef.add_recipe "cloudy"
+    chef.add_recipe "cloudy"
 
     chef.json = {
 
