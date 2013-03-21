@@ -4,6 +4,7 @@ Vagrant::Config.run do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
   config.vm.network :hostonly, "192.168.33.10"
   config.vm.host_name = "cf10.vagrant.box"
+  config.vm.share_folder "v-root", "/vagrant", ".", :extra => "dmode=777,fmode=777"
 
   config.vm.customize [
     "modifyvm", :id,
@@ -22,7 +23,8 @@ Vagrant::Config.run do |config|
     chef.add_recipe "apache2::mod_ssl"
     chef.add_recipe "coldfusion10"
     chef.add_recipe "coldfusion10::apache"
-    
+    chef.add_recipe "mxunit"
+
     chef.json = {
 
       "cf10" => {
@@ -33,6 +35,12 @@ Vagrant::Config.run do |config|
 
       "apache" => {
         "listen_ports" => [ "80", "443" ]
+      },
+
+      "mxunit" => {
+        "download" => {
+          "url" => "https://github.com/downloads/mxunit/mxunit/mxunit-2.1.3.zip"
+        }
       },
 
       "java" => {
