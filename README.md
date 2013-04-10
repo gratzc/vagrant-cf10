@@ -33,6 +33,6 @@ For example:
     $ librarian-chef install
     $ vagrant up
     
-Error:
+## Error
 - vagrant box add fails in Git Bash/Windows
  - DON'T USE GIT BASH
