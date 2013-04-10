@@ -38,6 +38,8 @@ For example:
  - DON'T USE GIT BASH
 
 ## TODO
-- instructions for running cloudy
-- adding cfqueryparam and varscoper inspections
+- instructions for running cloudy https://github.com/mhenke/vagrant-cf10/issues/3
+- adding cfqueryparam and varscoper inspections 
+ - https://github.com/mhenke/vagrant-cf10/issues/1
+ - https://github.com/mhenke/vagrant-cf10/issues/2
 - working acf 10 inspection
