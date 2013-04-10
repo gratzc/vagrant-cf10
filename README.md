@@ -25,6 +25,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
   - [http://192.168.33.10/CFIDE/administrator](http://192.168.33.10/CFIDE/administrator) 
  - MxUnit
   - [http://192.168.33.10/mxunit/](http://192.168.33.10/mxunit/)
+1. Your web root is a shared mapping on your host such as ```\vagrant-cf10\wwwroot```
 
 For example:
 
