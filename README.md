@@ -36,3 +36,8 @@ For example:
 ## Error
 - vagrant box add fails in Git Bash/Windows
  - DON'T USE GIT BASH
+
+## TODO
+- instructions for running cloudy
+- adding cfqueryparam and varscoper inspections
+- working acf 10 inspection
