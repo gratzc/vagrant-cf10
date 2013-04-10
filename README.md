@@ -12,10 +12,10 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - ```gem install librarian-chef```
 1. [Downloaded](https://www.adobe.com/cfusion/tdrc/index.cfm?product=coldfusion) 
  - **32bit Linux** ColdFusion 10 installer from Adobe 
- - download installer from adobe.com to directory `/vagrant/cf10/ColdFusion_10_WWEJ_linux32.bin`
+ - copy to directory `/vagrant-cf10/ColdFusion_10_WWEJ_linux32.bin`
 
 ## Using with Librarian
-1. Clone this repository to your Vagrant project directory, i.e. `/vagrant/cf10`
+1. Clone this repository to your Vagrant project directory, i.e. `/vagrant-cf10`
 1. Run `librarian-chef install` in the Vagrant project directory
 1. Download the 32bit Linux ColdFusion 10 installer from Adobe and place it in the Vagrant project directory, i.e. `/vagrant/cf10/ColdFusion_10_WWEJ_linux32.bin`
 1. Run ```vagrant up```
