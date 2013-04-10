@@ -18,7 +18,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 1. Open the command prompt ( **not git bash** )
 1. Clone this repository to your Vagrant project directory, i.e. `/vagrant-cf10`
 1. Run `librarian-chef install` in the Vagrant project directory
-1. Download the 32bit Linux ColdFusion 10 installer from Adobe and place it in the Vagrant project directory, i.e. `/vagrant/cf10/ColdFusion_10_WWEJ_linux32.bin`
+1. Download the 32bit Linux ColdFusion 10 installer from Adobe and place it in the Vagrant project directory, i.e. `//vagrant-cf10/ColdFusion_10_WWEJ_linux32.bin`
 1. Run ```vagrant up```
 1. Browse to 
  - ColdFusion Administrator ( login with username: admin, password: vagrant )
