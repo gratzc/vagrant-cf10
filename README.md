@@ -9,17 +9,17 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 1. [Ruby](http://www.ruby-lang.org/en/downloads) installed 
 1. [Git](http://git-scm.com/downloads) installed  
 1. [Librarian-Chef](https://github.com/applicationsonline/librarian-chef) installed
+ - ```gem install librarian-chef```
 1. [Downloaded](https://www.adobe.com/cfusion/tdrc/index.cfm?product=coldfusion) 
  - **32bit Linux** ColdFusion 10 installer from Adobe 
  - download installer from adobe.com to directory `/vagrant/cf10/ColdFusion_10_WWEJ_linux32.bin`
 
 ## Using with Librarian
 1. Clone this repository to your Vagrant project directory, i.e. `/vagrant/cf10`
-2. Copy `Vagrantfile.librarian` to `Vagrantfile`
-3. Run `librarian-chef install` in the Vagrant project directory
-4. Download the 32bit Linux ColdFusion 10 installer from Adobe and place it in the Vagrant project directory, i.e. `/vagrant/cf10/ColdFusion_10_WWEJ_linux32.bin`
-5. Run `vagrant up`
-6. Browse to 
+1. Run `librarian-chef install` in the Vagrant project directory
+1. Download the 32bit Linux ColdFusion 10 installer from Adobe and place it in the Vagrant project directory, i.e. `/vagrant/cf10/ColdFusion_10_WWEJ_linux32.bin`
+1. Run ```vagrant up```
+1. Browse to 
  - ColdFusion Administrator ( login with username: admin, password: vagrant )
   - [http://192.168.33.10/CFIDE/administrator](http://192.168.33.10/CFIDE/administrator) 
  - MxUnit
@@ -29,6 +29,5 @@ For example:
 
     $ git clone git@github.com:mhenke/vagrant-cf10.git
     $ cd /vagrant-cf10
-    $ cp Vagrantfile.librarian Vagrantfile
     $ librarian-chef install
     $ vagrant up
