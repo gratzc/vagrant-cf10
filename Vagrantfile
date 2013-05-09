@@ -56,10 +56,10 @@ Vagrant::Config.run do |config|
             "port" => 8080,
             "host" => "192.168.33.10",
             "url" => "http://192.168.33.10:8080"
-            "plugins" => %w(checkstyle clover dryhtmlpublisher jdepend plot pmd violations xunitgit github)
+            
           }
+      }
     }
-
   end
 
 end
