@@ -14,7 +14,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - **32bit Linux ColdFusion 10** installer from Adobe 
  - copy to directory `/vagrant-cf10/ColdFusion_10_WWEJ_linux32.bin`
 
-## Using with Librarian
+## Using
 1. Open the command prompt ( **not git bash** )
 1. Clone this repository to your Vagrant project directory, i.e. `/vagrant-cf10`
 1. Run `librarian-chef install` in the Vagrant project directory
@@ -27,12 +27,16 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
   - [http://192.168.33.10/mxunit/](http://192.168.33.10/mxunit/)
 1. Your web root is a shared mapping on your host such as ```\vagrant-cf10\wwwroot```
 
-For example:
+### For example:
 
     $ git clone git@github.com:mhenke/vagrant-cf10.git
     $ cd vagrant-cf10
     $ librarian-chef install
     $ vagrant up
+
+## Installs / Configures
+- blah
+- blah
     
 ## Error
 - vagrant box add fails in Git Bash/Windows
