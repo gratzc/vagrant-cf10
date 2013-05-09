@@ -51,8 +51,13 @@ Vagrant::Config.run do |config|
           "accept_oracle_download_terms" => true
         }        
       },
-      
-      "jenkins" => { :server => { :plugins => %w(checkstyle clover dryhtmlpublisher jdepend plot pmd violations xunitgit github) } } 
+      "jenkins" => {
+          "server" => {
+            "port" => 8080,
+            "host" => "192.168.33.10",
+            "url" => "http://192.168.33.10:8080"
+            "plugins" => %w(checkstyle clover dryhtmlpublisher jdepend plot pmd violations xunitgit github)
+          }
     }
 
   end
