@@ -30,13 +30,15 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 For example:
 
     $ git clone git@github.com:mhenke/vagrant-cf10.git
-    $ cd /vagrant-cf10
+    $ cd vagrant-cf10
     $ librarian-chef install
     $ vagrant up
     
 ## Error
 - vagrant box add fails in Git Bash/Windows
  - DON'T USE GIT BASH
+- vagrant ssh on Windows
+ - http://docs-v1.vagrantup.com/v1/docs/getting-started/ssh.html
 
 ## TODO
 - instructions for running cloudy https://github.com/mhenke/vagrant-cf10/issues/3
