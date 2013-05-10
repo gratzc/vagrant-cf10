@@ -6,10 +6,6 @@ Vagrant::Config.run do |config|
   config.vm.host_name = "cf10.vagrant.box"
   config.vm.share_folder "vagrant-root", "/vagrant", ".", :extra => "dmode=777,fmode=777"
 
-  config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
-  end
-
    config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
 
@@ -53,32 +49,22 @@ Vagrant::Config.run do |config|
       },
 
       "java" => {
-        "install_flavor" => "oracle",
-        "java_home" => "/usr/lib/jvm/java-7-oracle",
-        "jdk_version" => "7",
         "oracle" => {
           "accept_oracle_download_terms" => true
         }        
       },
 
-      "jenkins" => {
-          "server" => {
-            "port" => 8080,
-            "host" => "192.168.33.10",
-            "url" => "http://192.168.33.10:8080"
-            "plugins" => ["URLSCM", "git", "github", "github-api", "ghprb", "clover", "maven-plugin"]
-          }
-      },
-
-     "mysql" => {
-              "bind_address" => "0.0.0.0",
-              "server_root_password" => "",
-              "server_debian_password" => "",
-              "server_repl_password" => "",
-              "use_upstart" => false,
-      }
+        "jenkins" => {
+                "node" => {
+                    "home" => "/var/lib/jenkins"
+                },
+                "server" => {
+                    "plugins" => ["URLSCM", "git", "github", "github-api", "ghprb", "clover", "maven-plugin"]
+                }
+            }
 
     }
   end
 
+config.vm.forward_port 8080, 8181, :auto => true
 end
