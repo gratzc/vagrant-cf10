@@ -1,10 +1,15 @@
-Vagrant::Config.run do |config|
+Vagrant.configure("2") do |config|
   
   config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
   config.vm.network :hostonly, "192.168.33.10"
   config.vm.host_name = "cf10.vagrant.box"
   config.vm.share_folder "vagrant-root", "/vagrant", ".", :extra => "dmode=777,fmode=777"
+  
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    config.vm.network :forwarded_port, guest: 8080, host: 8181, auto_correct: true
+  end
 
    config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
@@ -49,22 +54,24 @@ Vagrant::Config.run do |config|
       },
 
       "java" => {
+        "install_flavor" => "oracle",
+        "java_home" => "/usr/lib/jvm/java-7-oracle",
+        "jdk_version" => "7",
         "oracle" => {
           "accept_oracle_download_terms" => true
         }        
       },
 
-        "jenkins" => {
-                "node" => {
-                    "home" => "/var/lib/jenkins"
-                },
-                "server" => {
-                    "plugins" => ["URLSCM", "git", "github", "github-api", "ghprb", "clover", "maven-plugin"]
-                }
-            }
+      "jenkins" => {
+        "node" => {
+            "home" => "/var/lib/jenkins"
+        },
+        "server" => {
+            "plugins" => ["URLSCM", "git", "github", "github-api", "ghprb", "clover", "maven-plugin"]
+        }
+      }
 
     }
   end
 
-config.vm.forward_port 8080, 8181, :auto => true
 end
