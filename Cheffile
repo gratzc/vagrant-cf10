@@ -13,7 +13,7 @@ cookbook 'zip'
 cookbook 'jenkins', :git => 'https://github.com/fnichol/chef-jenkins.git'
 
 cookbook 'ubuntu'
-cookbook 'mysql'
+#cookbook 'mysql'
 #cookbook 'postgresql '
 cookbook 'coldfusion10', :git => 'https://github.com/wharton/chef-coldfusion10.git'
 cookbook 'mxunit', :git => 'https://github.com/wharton/chef-mxunit.git'
