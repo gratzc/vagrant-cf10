@@ -50,6 +50,9 @@ Vagrant::Config.run do |config|
       },
 
       "jenkins" => {
+        "http_proxy" => {
+          "variant" => "apache"
+        },
         "node" => {
             "home" => "/var/lib/jenkins"
         },
