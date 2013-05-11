@@ -1,4 +1,4 @@
-Vagrant.configure("2") do |config|
+Vagrant::Config.run do |config|
   
   config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
@@ -6,11 +6,6 @@ Vagrant.configure("2") do |config|
   config.vm.host_name = "cf10.vagrant.box"
   config.vm.share_folder "vagrant-root", "/vagrant", ".", :extra => "dmode=777,fmode=777"
   
-  config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
-    config.vm.network :forwarded_port, guest: 8080, host: 8181, auto_correct: true
-  end
-
    config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
 
@@ -32,9 +27,6 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "cloudy"
     chef.add_recipe "jenkins"
 
-    #https://github.com/jubianchi/php-ci-box/blob/master/Vagrantfile
-    #https://github.com/widop/php-ci/blob/master/Vagrantfile
-    
     chef.json = {
 
       "cf10" => {
@@ -63,15 +55,22 @@ Vagrant.configure("2") do |config|
       },
 
       "jenkins" => {
-        "node" => {
-            "home" => "/var/lib/jenkins"
-        },
-        "server" => {
-            "plugins" => ["URLSCM", "git", "github", "github-api", "ghprb", "clover", "maven-plugin"]
-        }
+          "node" => {
+              "home" => "/var/lib/jenkins"
+          },
+          "server" => {
+              "plugins" => [ "git", "github"]
+          }
       }
 
     }
   end
 
+end
+
+Vagrant.configure("2") do |config|
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    config.vm.network :forwarded_port, guest: 8080, host: 8181, auto_correct: true
+  end
 end
