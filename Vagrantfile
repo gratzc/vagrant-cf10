@@ -14,6 +14,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "java"
     #chef.add_recipe "build-essential"
     chef.add_recipe "ant"
+    chef.add_recipe "ark"
     chef.add_recipe "git"
     chef.add_recipe "vim"
     chef.add_recipe "ubuntu"
@@ -25,7 +26,7 @@ Vagrant::Config.run do |config|
     #chef.add_recipe "postgresql::server"
     chef.add_recipe "mxunit"
     chef.add_recipe "cloudy"
-    chef.add_recipe "jenkins"
+    chef.add_recipe "jenkins::server"
 
     chef.json = {
 
@@ -45,22 +46,16 @@ Vagrant::Config.run do |config|
         }
       },
 
-      "java" => {
-        "install_flavor" => "oracle",
-        "java_home" => "/usr/lib/jvm/java-7-oracle",
-        "jdk_version" => "7",
-        "oracle" => {
-          "accept_oracle_download_terms" => true
-        }        
+      "java" => {      
       },
 
       "jenkins" => {
-          "node" => {
-              "home" => "/var/lib/jenkins"
-          },
-          "server" => {
-              "plugins" => [ "git", "github"]
-          }
+        "node" => {
+            "home" => "/var/lib/jenkins"
+        },
+        "server" => {
+            "plugins" => ["URLSCM", "git", "github", "github-api", "ghprb", "clover", "maven-plugin"]
+        }
       }
 
     }
