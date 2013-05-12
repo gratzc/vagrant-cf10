@@ -10,9 +10,7 @@ Vagrant::Config.run do |config|
     chef.cookbooks_path = "cookbooks"
 
     chef.add_recipe "apt"
-    #chef.add_recipe "rng-tools"
     chef.add_recipe "java"
-    #chef.add_recipe "build-essential"
     chef.add_recipe "ant"
     chef.add_recipe "ark"
     chef.add_recipe "git"
@@ -22,11 +20,15 @@ Vagrant::Config.run do |config|
     chef.add_recipe "apache2::mod_ssl"
     chef.add_recipe "coldfusion10"
     chef.add_recipe "coldfusion10::apache"
-    #chef.add_recipe "mysql::server"
-    #chef.add_recipe "postgresql::server"
     chef.add_recipe "mxunit"
     chef.add_recipe "cloudy"
-    chef.add_recipe "jenkins::server"
+    chef.add_recipe "qpscanner"
+    chef.add_recipe "varscoper"
+    #chef.add_recipe "jenkins::server"
+    #chef.add_recipe "rng-tools"
+    #chef.add_recipe "build-essential"
+    #chef.add_recipe "mysql::server"
+    #chef.add_recipe "postgresql::server"
 
     chef.json = {
 
@@ -38,29 +40,8 @@ Vagrant::Config.run do |config|
 
       "apache" => {
         "listen_ports" => [ "80", "443" ]
-      },
-
-      "mxunit" => {
-        "download" => {
-          "url" => "https://github.com/downloads/mxunit/mxunit/mxunit-2.1.3.zip"
-        }
-      },
-
-      "java" => {      
-      },
-
-      "jenkins" => {
-        "http_proxy" => {
-          "variant" => "apache"
-        },
-        "node" => {
-            "home" => "/var/lib/jenkins"
-        },
-        "server" => {
-            "plugins" => ["URLSCM", "git", "github", "github-api", "ghprb", "clover", "maven-plugin"]
-        }
       }
-
+      
     }
   end
 
