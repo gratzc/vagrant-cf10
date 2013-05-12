@@ -32,9 +32,11 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - ColdFusion Administrator ( login with username: admin, password: vagrant )
   - [http://192.168.33.10/CFIDE/administrator](http://192.168.33.10/CFIDE/administrator) 
  - MxUnit
-  - [http://192.168.33.10/mxunit/](http://192.168.33.10/mxunit/)
+  - [http://192.168.33.10/mxunit](http://192.168.33.10/mxunit)
  - CFQuery Param Scanner
+  - [http://192.168.33.10/qpscanner](http://192.168.33.10/qpscanner)
  - VarScoper
+  - [http://192.168.33.10/varscoper](http://192.168.33.10/varscoper)
 
 1. Your web root is a shared mapping on your host such as ```\vagrant-cf10\wwwroot```
 
@@ -59,10 +61,10 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - DON'T USE GIT BASH
 - vagrant ssh on Windows
  - http://docs-v1.vagrantup.com/v1/docs/getting-started/ssh.html
+- stdin: is not a tty
+
 
 ## TODO
 - instructions for running cloudy https://github.com/mhenke/vagrant-cf10/issues/3
-- adding cfqueryparam and varscoper inspections 
- - https://github.com/mhenke/vagrant-cf10/issues/1
- - https://github.com/mhenke/vagrant-cf10/issues/2
-- working acf 10 inspection
+- working acf 10 inspection https://github.com/mhenke/vagrant-cf10/issues/7
+- get jenkins hooked in https://github.com/mhenke/vagrant-cf10/issues/6

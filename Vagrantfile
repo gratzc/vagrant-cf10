@@ -12,21 +12,16 @@ Vagrant::Config.run do |config|
     chef.add_recipe "apt"
     chef.add_recipe "java"
     chef.add_recipe "ant"
-    chef.add_recipe "ark"
     chef.add_recipe "git"
     chef.add_recipe "vim"
-    chef.add_recipe "ubuntu"
     chef.add_recipe "apache2"
     chef.add_recipe "apache2::mod_ssl"
-    chef.add_recipe "coldfusion10"
     chef.add_recipe "coldfusion10::apache"
-    chef.add_recipe "mxunit"
     chef.add_recipe "cloudy"
-    chef.add_recipe "qpscanner"
+    chef.add_recipe "mxunit"
     chef.add_recipe "varscoper"
+    chef.add_recipe "qpscanner"
     #chef.add_recipe "jenkins::server"
-    #chef.add_recipe "rng-tools"
-    #chef.add_recipe "build-essential"
     #chef.add_recipe "mysql::server"
     #chef.add_recipe "postgresql::server"
 
@@ -41,7 +36,7 @@ Vagrant::Config.run do |config|
       "apache" => {
         "listen_ports" => [ "80", "443" ]
       }
-      
+
     }
   end
 
