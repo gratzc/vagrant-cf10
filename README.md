@@ -69,8 +69,3 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - http://docs-v1.vagrantup.com/v1/docs/getting-started/ssh.html
 - stdin: is not a tty
  - not really an error, just annoying message
-
-## TODO
-- instructions for running cloudy https://github.com/mhenke/vagrant-cf10/issues/3
-- working acf 10 inspection https://github.com/mhenke/vagrant-cf10/issues/7
-- get jenkins hooked in https://github.com/mhenke/vagrant-cf10/issues/6
