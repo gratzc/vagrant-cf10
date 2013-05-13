@@ -3,8 +3,7 @@
 
 This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www.adobe.com/products/coldfusion-family.html) development and includes Cloudy With A Chance Of Tests.
 
-## Prerequietes
-1. Clone git@github.com:mhenke/vagrant-cf10.git
+## Prerequisites
 1. [Vagrant](http://downloads.vagrantup.com) installed
  - Requires [VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed
 1. [Ruby](http://www.ruby-lang.org/en/downloads) installed 
