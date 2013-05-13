@@ -39,14 +39,10 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 1. Download the 32bit Linux ColdFusion 10 installer from Adobe and place it in the Vagrant project directory, i.e. `//vagrant-cf10/ColdFusion_10_WWEJ_linux32.bin`
 1. Run ```vagrant up```
 1. Browse to 
- - ColdFusion Administrator ( login with username: admin, password: vagrant )
-   - [http://192.168.33.10/CFIDE/administrator](http://192.168.33.10/CFIDE/administrator)
- - MxUnit
-   - [http://192.168.33.10/mxunit](http://192.168.33.10/mxunit)
- - CFQuery Param Scanner
-   - [http://192.168.33.10/qpscanner](http://192.168.33.10/qpscanner)
- - VarScoper
-   - [http://192.168.33.10/varscoper](http://192.168.33.10/varscoper)
+ - ColdFusion Administrator ( login with username: admin, password: vagrant ) - [http://192.168.33.10/CFIDE/administrator](http://192.168.33.10/CFIDE/administrator)
+ - MxUnit - [http://192.168.33.10/mxunit](http://192.168.33.10/mxunit)
+ - CFQuery Param Scanner - [http://192.168.33.10/qpscanner](http://192.168.33.10/qpscanner)
+ - VarScoper - [http://192.168.33.10/varscoper](http://192.168.33.10/varscoper)
 
 1. Your **web root** is a shared mapping on your host such as ```/vagrant-cf10/wwwroot```
 
