@@ -28,8 +28,8 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 ```
 	$ vagrant ssh
 	$ cd /vagrant/wwwroot
-	$ ant -p build.xml  # shows all targets
-	$ ant  # runs default target
+	$ ant -p build.xml #shows all targets
+	$ ant #runs default target
 ```
 
 ## Detailed Setup
