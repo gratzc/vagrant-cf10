@@ -16,17 +16,21 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - copy to directory `/vagrant-cf10/ColdFusion_10_WWEJ_linux32.bin`
 
 ## Quick Setup
+```
     $ git clone git@github.com:mhenke/vagrant-cf10.git
     $ cd vagrant-cf10
     $ librarian-chef install
     $ vagrant up
+```
 
- ## Quick Usage
+## Quick Usage
   Copy your code to your **web root** ```/vagrant-cf10/wwwroot``` 
-    $ vagrant ssh
+```
+	$ vagrant ssh
 	$ cd /vagrant/wwwroot
 	$ ant -p build.xml  # shows all targets
 	$ ant  # runs default target
+```
 
 ## Detailed Setup
 1. Open the command prompt ( **not git bash** )
