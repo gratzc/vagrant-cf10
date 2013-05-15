@@ -43,7 +43,7 @@ Vagrant::Config.run do |config|
       },
 
       "java"=> {
-        "listen_ports" => [ "80", "443" ]
+        
       },
 
       "apache" => {
@@ -56,12 +56,13 @@ Vagrant::Config.run do |config|
         },
 
         "http_proxy" => {
-          "variant" => "apache"
+          "variant" => "apache2"
         },
         
         "server" => {
           "plugins" => ["URLSCM", "git", "github", "checkstyle", "dry", "htmlpublisher", "violations", "pmd", "ansicolor"]
         }
+
       }
 
     }
