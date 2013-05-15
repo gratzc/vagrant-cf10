@@ -30,7 +30,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "mxunit"
     chef.add_recipe "varscoper"
     chef.add_recipe "qpscanner"
-    #chef.add_recipe "jenkins::server"
+    chef.add_recipe "jenkins::server"
     #chef.add_recipe "mysql::server"
     #chef.add_recipe "postgresql::server"
 
@@ -42,8 +42,26 @@ Vagrant::Config.run do |config|
         }
       },
 
+      "java"=> {
+        "listen_ports" => [ "80", "443" ]
+      },
+
       "apache" => {
         "listen_ports" => [ "80", "443" ]
+      },
+
+      "jenkins" => {
+        "node" => {
+          "home" => "/var/lib/jenkins"
+        },
+
+        "http_proxy" => {
+          "variant" => "apache"
+        },
+        
+        "server" => {
+          "plugins" => ["URLSCM", "git", "github", "checkstyle", "dry", "htmlpublisher", "violations", "pmd", "ansicolor"]
+        }
       }
 
     }
