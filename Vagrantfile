@@ -30,7 +30,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "mxunit"
     chef.add_recipe "varscoper"
     chef.add_recipe "qpscanner"
-    chef.add_recipe "jenkins"
+    #chef.add_recipe "jenkins"
     #chef.add_recipe "mysql::server"
     #chef.add_recipe "postgresql::server"
 
