@@ -42,27 +42,17 @@ Vagrant::Config.run do |config|
         }
       },
 
-      "java"=> {
-        
-      },
-
-      "apache" => {
+       "apache" => {
         "listen_ports" => [ "80", "443" ]
       },
 
-      "jenkins" => {
-        "node" => {
-          "home" => "/var/lib/jenkins"
-        },
-
-        "http_proxy" => {
-          "variant" => "apache2"
-        },
-        
-        "server" => {
-          "plugins" => ["URLSCM", "git", "github", "checkstyle", "dry", "htmlpublisher", "violations", "pmd", "ansicolor"]
-        }
-
+      "java" => {
+        "install_flavor" => "oracle",
+        "java_home" => "/usr/lib/jvm/java-7-oracle",
+        "jdk_version" => "7",
+        "oracle" => {
+          "accept_oracle_download_terms" => true
+        }        
       }
 
     }
