@@ -47,12 +47,7 @@ Vagrant::Config.run do |config|
       },
 
       "java" => {
-        "install_flavor" => "oracle",
-        "java_home" => "/usr/lib/jvm/java-7-oracle",
-        "jdk_version" => "7",
-        "oracle" => {
-          "accept_oracle_download_terms" => true
-        }        
+             
       }
 
     }
