@@ -6,3 +6,4 @@
 !Vagrantfile.berks
 !Vagrantfile.librarian
 !Vagrantfile
+!install_jenkins.sh

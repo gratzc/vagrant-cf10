@@ -42,6 +42,8 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - MxUnit - [http://192.168.33.10/mxunit](http://192.168.33.10/mxunit)
  - CFQuery Param Scanner - [http://192.168.33.10/qpscanner](http://192.168.33.10/qpscanner)
  - VarScoper - [http://192.168.33.10/varscoper](http://192.168.33.10/varscoper)
+ - Jenkins - [http://192.168.33.10:8080](http://192.168.33.10:8080)
+  - Installed Plugins - [http://192.168.33.10:8080/pluginManager/installed](http://192.168.33.10:8080/pluginManager/installed)
 
 1. Your **web root** is a shared mapping on your host such as ```/vagrant-cf10/wwwroot```
 
