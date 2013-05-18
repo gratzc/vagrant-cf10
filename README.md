@@ -49,7 +49,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 
 ## Installs / Configures
 - Adobe ColdFusion 10
-- Oracle Java 6
+- Oracle Java 7
 - Jenkins
 - Apache
 - VIM
@@ -59,9 +59,6 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 - Cloudy with a Chance of Tests
 - CFQuery Param Scanner
 - VarScope Scanner
-- SQL Database (optional)
- - MYSQL
- - PostgreSQL
 
 ## Error
 - vagrant box add fails in Git Bash/Windows
