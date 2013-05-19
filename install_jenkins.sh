@@ -1,9 +1,13 @@
 #!/bin/bash
+echo setup jenkins
+wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+echo update system
+sudo apt-get -qq -y update
+
 echo install jenkins
-wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add - 
-sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ &gt; /etc/apt/sources.list.d/jenkins.list'
-sudo aptitude -q -y update
-sudo aptitude -q -y install jenkins
+sudo apt-get -qq -y install jenkins
 
 echo stop jenkins
 service jenkins stop
@@ -12,11 +16,11 @@ service jenkins stop
 echo update jenkins
 rm -f /usr/share/jenkins/jenkins.war.backup
 cp /usr/share/jenkins/jenkins.war /usr/share/jenkins/jenkins.war.backup
-rm -f jenkins.war
+rm -f /usr/share/jenkins/jenkins.war
 wget -q -P http://mirrors.jenkins-ci.org/war/latest/jenkins.war /usr/share/jenkins/
 
 # copy cloudy job
-# sudo apt-get upgrade
+sudo apt-get upgrade
 
 echo install plugins
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/violations.hpi
@@ -31,6 +35,10 @@ wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/github.
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/github-api.hpi
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/compact-columns.hpi
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/tmpcleaner.hpi
+wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/jquery.hpi
+wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/git-client.hpi
+wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/analysis-collector.hpi
+wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/violations.hpi
 
 echo start jenkins
 service jenkins start
