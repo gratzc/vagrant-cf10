@@ -50,7 +50,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 1. Verify [Configure System](http://192.168.33.10:8080/configure) under **Git plugin**
  - **Global Config user.name** = cloudy
  - **Global Config user.email Value** = cloudy@example.com
-1. Setup [Job Cloudy Configure](http://192.168.33.10:8080/job/cloudy/configure)
+1. Verify [Job Cloudy Configure](http://192.168.33.10:8080/job/cloudy/configure)
  - **GitHub project** = https://github.com/mhenke/cf-datatables/
  - **Source Code Management** 
   - **Git** is selected
