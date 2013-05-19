@@ -31,11 +31,31 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 	$ ant #runs default target
 ```
 
-## Quick Usage ( JENKINS )
+## Usage ( JENKINS )
 1. Uncomment line with ```jenkins_workspace``` in ```build.properties``` located in your web root 
-1. (optional) Setup [**Source Code Management** for Cloudy](http://192.168.33.10:8080/job/cloudy/configure)
- - default is a Github project called [cf-datatables](https://github.com/mhenke/cf-datatables/)
-1. Go you [http://192.168.33.10:8080/job/cloudy](http://192.168.33.10:8080/job/cloudy)
+1. Verify these [plugins are installed](http://192.168.33.10:8080/pluginManager/installed)
+ - ant
+ - analysis-core
+ - heroku-jenkins-plugin
+ - compact-columns
+ - git-client
+ - git
+ - github-api
+ - github
+ - tmpcleaner
+ - warnings
+ - analysis-collector
+ - violations
+ - jquery plugin
+1. Verify [Configure System](http://192.168.33.10:8080/configure) under **Git plugin**
+ - **Global Config user.name** = cloudy
+ - **Global Config user.email Value** = cloudy@example.com
+1. Setup [Job Cloudy Configure](http://192.168.33.10:8080/job/cloudy/configure)
+ - **GitHub project** = https://github.com/mhenke/cf-datatables/
+ - **Source Code Management** 
+  - **Git** is selected
+  - **Repository URL** = git://github.com/mhenke/cf-datatables.git
+1. Go to [Job Cloudy](http://192.168.33.10:8080/job/cloudy)
 1. Click **Build Now**
 1. To see the build output select **Console Output**
 
