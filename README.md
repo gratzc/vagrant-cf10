@@ -23,7 +23,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 ```
 
 ## Quick Usage ( ANT )
-  Copy your code to your **web root** ```/vagrant-cf10/wwwroot``` 
+ Copy your code to your **web root** ```/vagrant-cf10/wwwroot``` 
 ```
 	$ vagrant ssh
 	$ cd /vagrant/wwwroot
@@ -32,9 +32,12 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 ```
 
 ## Quick Usage ( JENKINS )
-
-
-
+1. Uncomment line with ```jenkins_workspace``` in ```build.properties``` located in your web root 
+1. (optional) Setup **Source Code Management** at (http://192.168.33.10:8080/job/cloudy/configure)[http://192.168.33.10:8080/job/cloudy/configure]
+ - default is a Github project called [cf-datatables](https://github.com/mhenke/cf-datatables/)
+1. Go you [http://192.168.33.10:8080/job/cloudy](http://192.168.33.10:8080/job/cloudy)
+1. Click **Build Now**
+1. To see the build output select **Console Output**
 
 ## Detailed Setup
 1. Open the command prompt ( **not git bash** )
@@ -42,7 +45,6 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 1. Run `librarian-chef install` in the Vagrant project directory
 1. Download the 32bit Linux ColdFusion 10 installer from Adobe and place it in the Vagrant project directory, i.e. `//vagrant-cf10/ColdFusion_10_WWEJ_linux32.bin`
 1. Run ```vagrant up```
-2. 
 
 ## Important File Paths
 1. Your **web root** is a shared mapping on your host such as ```/vagrant-cf10/wwwroot```
@@ -55,7 +57,8 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - CFQuery Param Scanner - [http://192.168.33.10/qpscanner](http://192.168.33.10/qpscanner)
  - VarScoper - [http://192.168.33.10/varscoper](http://192.168.33.10/varscoper)
  - Jenkins - [http://192.168.33.10:8080](http://192.168.33.10:8080)
-
+ - Cloudy Job - [http://192.168.33.10:8080/job/cloudy](http://192.168.33.10:8080/job/cloudy)
+ - 
 ## Installs / Configures
 - Adobe ColdFusion 10
 - Oracle Java 7
