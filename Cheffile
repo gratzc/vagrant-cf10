@@ -23,8 +23,3 @@ cookbook 'varscoper', :git => 'https://github.com/mhenke/chef-varscoper.git'
 cookbook 'qpscanner', :git => 'https://github.com/mhenke/chef-cfqueryparam.git'
 
 #cookbook 'jenkins'
-#cookbook 'jenkins', :git => 'https://github.com/opscode-cookbooks/jenkins.git'
-#cookbook 'jenkins', :git => 'https://github.com/fnichol/chef-jenkins.git'
-
-#cookbook 'mysql'
-#cookbook 'postgresql'
