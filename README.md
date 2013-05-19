@@ -33,7 +33,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 
 ## Quick Usage ( JENKINS )
 1. Uncomment line with ```jenkins_workspace``` in ```build.properties``` located in your web root 
-1. (optional) Setup **Source Code Management** at (http://192.168.33.10:8080/job/cloudy/configure)[http://192.168.33.10:8080/job/cloudy/configure]
+1. (optional) Setup [**Source Code Management** for Cloudy](http://192.168.33.10:8080/job/cloudy/configure)
  - default is a Github project called [cf-datatables](https://github.com/mhenke/cf-datatables/)
 1. Go you [http://192.168.33.10:8080/job/cloudy](http://192.168.33.10:8080/job/cloudy)
 1. Click **Build Now**
@@ -51,14 +51,13 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 1. When ```vagrant ssh``` into your instance, the web root is ```/vagrant/wwwroot```
 
 ## Important URLs
-1. Browse to 
- - ColdFusion Administrator ( login with username: admin, password: vagrant ) - [http://192.168.33.10/CFIDE/administrator](http://192.168.33.10/CFIDE/administrator)
- - MxUnit - [http://192.168.33.10/mxunit](http://192.168.33.10/mxunit)
- - CFQuery Param Scanner - [http://192.168.33.10/qpscanner](http://192.168.33.10/qpscanner)
- - VarScoper - [http://192.168.33.10/varscoper](http://192.168.33.10/varscoper)
- - Jenkins - [http://192.168.33.10:8080](http://192.168.33.10:8080)
- - Cloudy Job - [http://192.168.33.10:8080/job/cloudy](http://192.168.33.10:8080/job/cloudy)
- - 
+- [ColdFusion Administrator](http://192.168.33.10/CFIDE/administrator) ( login with username: admin, password: vagrant )
+- [MxUnit](http://192.168.33.10/mxunit)
+- [CFQuery Param Scanner](http://192.168.33.10/qpscanner)
+- [VarScoper](http://192.168.33.10/varscoper)
+- [Jenkins](http://192.168.33.10:8080)
+- [Jenkins - Job - Cloudy](http://192.168.33.10:8080/job/cloudy)
+
 ## Installs / Configures
 - Adobe ColdFusion 10
 - Oracle Java 7
