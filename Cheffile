@@ -3,7 +3,6 @@
 
 site 'http://community.opscode.com/api/v1'
 
-
 cookbook 'apt'
 cookbook 'ant'
 cookbook 'git'
@@ -11,15 +10,11 @@ cookbook 'subversion'
 cookbook 'rng-tools'
 cookbook 'vim' 
 cookbook 'zip'
-
 cookbook 'java'
-
 cookbook 'apache2'
-
 cookbook 'coldfusion10', :git => 'https://github.com/wharton/chef-coldfusion10.git'
 cookbook 'mxunit', :git => 'https://github.com/wharton/chef-mxunit.git'
 cookbook 'cloudy', :git => 'https://github.com/mhenke/Cloudy-With-A-Chance-Of-Tests-Chef.git'
 cookbook 'varscoper', :git => 'https://github.com/mhenke/chef-varscoper.git'
 cookbook 'qpscanner', :git => 'https://github.com/mhenke/chef-cfqueryparam.git'
-
 #cookbook 'jenkins'

@@ -9,18 +9,7 @@ sudo apt-get -qq -y update
 echo install jenkins
 sudo apt-get -qq -y install jenkins
 
-echo stop jenkins
-service jenkins stop
-
-# update jenkins
-echo update jenkins
-rm -f /usr/share/jenkins/jenkins.war.backup
-cp /usr/share/jenkins/jenkins.war /usr/share/jenkins/jenkins.war.backup
-rm -f /usr/share/jenkins/jenkins.war
-wget -q -P http://mirrors.jenkins-ci.org/war/latest/jenkins.war /usr/share/jenkins/
-
 # copy cloudy job
-sudo apt-get upgrade
 
 echo install plugins
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/violations.hpi
@@ -40,8 +29,8 @@ wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/git-cli
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/analysis-collector.hpi
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/violations.hpi
 
-echo start jenkins
-service jenkins start
+echo restart jenkins
+service jenkins restart
 
 echo fix permissions issue with WEB-INF/cfclasses
 sudo chmod 777 /opt/coldfusion10/cfusion/wwwroot/WEB-INF/cfclasses/
