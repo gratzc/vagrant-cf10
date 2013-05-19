@@ -15,7 +15,8 @@ cp /usr/share/jenkins/jenkins.war /usr/share/jenkins/jenkins.war.backup
 rm -f jenkins.war
 wget -q -P http://mirrors.jenkins-ci.org/war/latest/jenkins.war /usr/share/jenkins/
 
-#sudo apt-get upgrade
+# copy cloudy job
+# sudo apt-get upgrade
 
 echo install plugins
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/violations.hpi
