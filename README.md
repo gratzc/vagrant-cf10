@@ -81,4 +81,4 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 - permissions issue when running ant
  - run ```sudo chmod 777 /opt/coldfusion10/cfusion/wwwroot/WEB-INF/cfclasses/```
 - Jenkins Cloudy job configuration feezes on loading http://192.168.33.10:8080/job/cloudy/configure
- - update Jenkins
+ - update Jenkins to at least ver. 1.509.1
