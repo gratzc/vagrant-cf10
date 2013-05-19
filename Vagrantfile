@@ -19,6 +19,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "apt"
     chef.add_recipe "ant"
     chef.add_recipe "git"
+    chef.add_recipe "subversion"
     chef.add_recipe "rng-tools" 
     chef.add_recipe "vim"
     chef.add_recipe "java" 
@@ -31,8 +32,6 @@ Vagrant::Config.run do |config|
     chef.add_recipe "varscoper"
     chef.add_recipe "qpscanner"
     #chef.add_recipe "jenkins"
-    #chef.add_recipe "mysql::server"
-    #chef.add_recipe "postgresql::server"
 
     chef.json = {
 
@@ -58,8 +57,9 @@ Vagrant::Config.run do |config|
     }
   end
 
-end
+  if !File.exists?( File.expand_path "'installed_jenkins.txt'" )
+    config.vm.provision :shell, :path => "install_jenkins.sh"
+    File.open('installed_jenkins.txt', 'w') { |file| file.write("installed") }
+  end
 
-Vagrant::Config.run do |config|
-  config.vm.provision :shell, :path => "install_jenkins.sh"
 end
