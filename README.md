@@ -67,3 +67,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - http://docs-v1.vagrantup.com/v1/docs/getting-started/ssh.html
 - stdin: is not a tty
  - not really an error, just annoying message
+- permissions issue when running ant
+ - run ```sudo chmod 777 /opt/coldfusion10/cfusion/wwwroot/WEB-INF/cfclasses/```
+- Jenkins Cloudy job configuration feezes on loading http://192.168.33.10:8080/job/cloudy/configure
+ - update Jenkins
