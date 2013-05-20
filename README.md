@@ -60,19 +60,25 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - analysis-collector
  - violations
  - jquery plugin
-1. Under [Configure System](http://192.168.33.10:8080/configure) add **Git plugin** fill out:
- - **Global Config user.name** = cloudy
- - **Global Config user.email Value** = cloudy@example.com
+1. Complete **Git plugin** on [Configure System](http://192.168.33.10:8080/configure) :
+ - **Global Config user.name** ```is cloudy```
+ - **Global Config user.email Value** is ```cloudy@example.com```
 1. Verify [Job Cloudy Configure](http://192.168.33.10:8080/job/cloudy/configure)
- - **GitHub project** = https://github.com/mhenke/cf-datatables/
+ - **GitHub project** is ```https://github.com/mhenke/cf-datatables```
  - **Source Code Management**
- - === **Git** is selected
- - ===**Repository URL** = git://github.com/mhenke/cf-datatables.git
+ - === **Git** is ```selected```
+ - === **Repository URL** is ```git://github.com/mhenke/cf-datatables.git```
 - Under **Build** make sure **Invoke Ant** is present and
- - **Targets** = all
- - VERIFY POST BUILD PROCESS ARE CORRECT
- - === Violations
- - === JSLint
+ - **Targets** is ```all```
+ - **Post-build Actions**
+ - === Scan workspace for open tasks
+ - ====== ***Files to scan*** is ```**/*.cfc, **/*.cfml, **/*.cfm```
+ - === Report Violations
+ - ====== cpd **XML filename pattern*** is ```**/cpd.xml```
+ - ====== csslint **XML filename pattern*** is ```**/csslint.xml```
+ - ====== jslint **XML filename pattern*** is ``` **/jslint.xml```
+ - === Publish duplicate code analysis results
+ - ====== ***Duplicate code results*** is ```**/cpd.xml```
 1. Go to [Job Cloudy](http://192.168.33.10:8080/job/cloudy)
 1. Click **Build Now**
 1. To see the build output select **Console Output**
