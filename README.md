@@ -45,7 +45,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 	$ ant #runs default target
 ```
 
-## Using the example job ( JENKINS )
+## Using example job ( JENKINS )
 1. Verify these [plugins are installed](http://192.168.33.10:8080/pluginManager/installed)
  - ant
  - analysis-core
