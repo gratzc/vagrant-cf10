@@ -68,17 +68,17 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - **Source Code Management**
  - === **Git** is ```selected```
  - === **Repository URL** is ```git://github.com/mhenke/cf-datatables.git```
-- Under **Build** make sure **Invoke Ant** is present and
- - **Targets** is ```all```
+ - Under **Build** make sure **Invoke Ant** is present
+ - === **Targets** is ```all```
  - **Post-build Actions**
  - === Scan workspace for open tasks
- - ====== ***Files to scan*** is ```**/*.cfc, **/*.cfml, **/*.cfm```
+ - ====== **Files to scan** is ```**/*.cfc, **/*.cfml, **/*.cfm```
  - === Report Violations
- - ====== cpd **XML filename pattern*** is ```**/cpd.xml```
- - ====== csslint **XML filename pattern*** is ```**/csslint.xml```
- - ====== jslint **XML filename pattern*** is ``` **/jslint.xml```
+ - ====== cpd **XML filename pattern** is ```**/cpd.xml```
+ - ====== csslint **XML filename pattern** is ```**/csslint.xml```
+ - ====== jslint **XML filename pattern** is ``` **/jslint.xml```
  - === Publish duplicate code analysis results
- - ====== ***Duplicate code results*** is ```**/cpd.xml```
+ - ====== **Duplicate code results** is ```**/cpd.xml```
 1. Go to [Job Cloudy](http://192.168.33.10:8080/job/cloudy)
 1. Click **Build Now**
 1. To see the build output select **Console Output**
