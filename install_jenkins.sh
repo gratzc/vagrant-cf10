@@ -29,6 +29,9 @@ wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/jquery.
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/git-client.hpi
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/analysis-collector.hpi
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/violations.hpi
+wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/thinBackup.hpi
+wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/Surround-SCM-plugin.hpi
+wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/checkstyle.hpi
 
 echo restart jenkins
 service jenkins restart
