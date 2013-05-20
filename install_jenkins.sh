@@ -33,5 +33,8 @@ wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/violati
 echo restart jenkins
 service jenkins restart
 
+echo fix permissions on /var/lib/jenkins/plugins
+sudo chmod 777 -R /var/lib/jenkins/plugins
+
 echo fix permissions issue with WEB-INF/cfclasses
 sudo chmod 777 /opt/coldfusion10/cfusion/wwwroot/WEB-INF/cfclasses/

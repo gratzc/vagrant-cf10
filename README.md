@@ -55,6 +55,8 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - **Source Code Management** 
   - **Git** is selected
   - **Repository URL** = git://github.com/mhenke/cf-datatables.git
+ - Under **Build** make sure **Invoke Ant** is present and
+ - **Targets** = all
 1. Go to [Job Cloudy](http://192.168.33.10:8080/job/cloudy)
 1. Click **Build Now**
 1. To see the build output select **Console Output**
@@ -101,5 +103,3 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - not really an error, just annoying message
 - permissions issue when running ant
  - run ```sudo chmod 777 /opt/coldfusion10/cfusion/wwwroot/WEB-INF/cfclasses/```
-- Jenkins Cloudy job configuration feezes on loading http://192.168.33.10:8080/job/cloudy/configure
- - update Jenkins to at least ver. 1.509.1
