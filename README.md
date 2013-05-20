@@ -1,7 +1,7 @@
 # ColdFusion 10 Vagrant Environment
 ## And [Cloudy With A Chance Of Tests](https://github.com/mhenke/Cloudy-With-A-Chance-Of-Tests)
 
-This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www.adobe.com/products/coldfusion-family.html) development and includes Cloudy With A Chance Of Tests. It does all the work for you in a few commands of setting and configuring.
+This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www.adobe.com/products/coldfusion-family.html) development and includes Cloudy With A Chance Of Tests. It does all the work for you in a few commands.
 
 ## Installs / Configures
 - Adobe ColdFusion 10
