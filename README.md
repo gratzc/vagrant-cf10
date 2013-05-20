@@ -57,6 +57,9 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
   - **Repository URL** = git://github.com/mhenke/cf-datatables.git
  - Under **Build** make sure **Invoke Ant** is present and
  - **Targets** = all
+ - VERIFY Post Build Processing
+  - Violations
+  - JSLint
 1. Go to [Job Cloudy](http://192.168.33.10:8080/job/cloudy)
 1. Click **Build Now**
 1. To see the build output select **Console Output**
