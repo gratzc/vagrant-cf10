@@ -5,7 +5,7 @@ sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources
 
 echo update system
 sudo apt-get -qq -y update
-sudo apt-get -qq -y dist-upgrade
+#sudo apt-get -qq -y dist-upgrade
 
 echo install jenkins
 sudo apt-get -qq -y install jenkins
