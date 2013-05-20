@@ -64,11 +64,11 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
  - **Global Config user.name** = cloudy
  - **Global Config user.email Value** = cloudy@example.com
 1. Verify [Job Cloudy Configure](http://192.168.33.10:8080/job/cloudy/configure)
- - **GitHub project** = https://github.com/mhenke/cf-datatables/
- - **Source Code Management** 
-   - **Git** is selected
-   - **Repository URL** = git://github.com/mhenke/cf-datatables.git
- - Under **Build** make sure **Invoke Ant** is present and
+ a. **GitHub project** = https://github.com/mhenke/cf-datatables/
+ b. **Source Code Management**
+ - **Git** is selected
+ - **Repository URL** = git://github.com/mhenke/cf-datatables.git
+- Under **Build** make sure **Invoke Ant** is present and
  - **Targets** = all
  - VERIFY POST BUILD PROCESS ARE CORRECT
    - Violations
