@@ -45,40 +45,12 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 	$ ant #runs default target
 ```
 
-## Using example job ( JENKINS )
-1. Verify these [plugins are installed](http://192.168.33.10:8080/pluginManager/installed)
- - ant
- - analysis-core
- - heroku-jenkins-plugin
- - compact-columns
- - git-client
- - git
- - github-api
- - github
- - tmpcleaner
- - warnings
- - analysis-collector
- - violations
- - jquery plugin
+## Using Cloudy job ( JENKINS )
+The cloudy job is setup automatically. This test has mxunit ( unit and accpetance testings), jslint, csslint, qpscanner, varscoper, and a syntax check ready out of the box.
+
 1. Complete **Git plugin** on [Configure System](http://192.168.33.10:8080/configure) :
  - **Global Config user.name** ```is cloudy```
  - **Global Config user.email Value** is ```cloudy@example.com```
-1. Verify [Job Cloudy Configure](http://192.168.33.10:8080/job/cloudy/configure)
- - **GitHub project** is ```https://github.com/mhenke/cf-datatables```
- - **Source Code Management**
- - === **Git** is ```selected```
- - === **Repository URL** is ```git://github.com/mhenke/cf-datatables.git```
- - Under **Build** make sure **Invoke Ant** is present
- - === **Targets** is ```all```
- - **Post-build Actions**
- - === Scan workspace for open tasks
- - ====== **Files to scan** is ```**/*.cfc, **/*.cfml, **/*.cfm```
- - === Report Violations
- - ====== cpd **XML filename pattern** is ```**/cpd.xml```
- - ====== csslint **XML filename pattern** is ```**/csslint.xml```
- - ====== jslint **XML filename pattern** is ``` **/jslint.xml```
- - === Publish duplicate code analysis results
- - ====== **Duplicate code results** is ```**/cpd.xml```
 1. Go to [Job Cloudy](http://192.168.33.10:8080/job/cloudy)
 1. Click **Build Now**
 1. To see the build output select **Console Output**
@@ -86,7 +58,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 ## Detailed Initial Setup
 1. Open the command prompt ( **not git bash** )
 1. Clone this repository to your Vagrant project directory, i.e. `/vagrant-cf10`
-1. Run `librarian-chef install` in the Vagrant project directory
+1. Run ```librarian-chef install``` in the Vagrant project directory
 1. Download the 32bit Linux ColdFusion 10 installer from Adobe and place it in the Vagrant project directory, i.e. `//vagrant-cf10/ColdFusion_10_WWEJ_linux32.bin`
 1. Run ```vagrant up```
 
