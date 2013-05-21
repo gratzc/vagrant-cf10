@@ -45,11 +45,10 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 	$ ant #runs default target
 ```
 
-## Using Cloudy job ( JENKINS )
-The cloudy job is setup automatically. This test has mxunit ( unit and accpetance testings), jslint, csslint, qpscanner, varscoper, and a syntax check ready out of the box.
-
+## Using cloudy job ( JENKINS )
+The cloudy job is already to go. This build has mxunit ( unit and accpetance testings ), jslint, csslint, qpscanner, varscoper, and a syntax check ready out of the box.
 1. Complete **Git plugin** on [Configure System](http://192.168.33.10:8080/configure) :
- - **Global Config user.name** ```is cloudy```
+ - **Global Config user.name** is ```cloudy```
  - **Global Config user.email Value** is ```cloudy@example.com```
 1. Go to [Job Cloudy](http://192.168.33.10:8080/job/cloudy)
 1. Click **Build Now**
