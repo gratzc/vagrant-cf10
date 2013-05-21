@@ -5,7 +5,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 
 ## Installs / Configures
 - Adobe ColdFusion 10
-- Oracle Java 7
+- Java
 - Jenkins, example job, and plugins
 - Apache
 - VIM
@@ -18,13 +18,13 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 - VarScope Scanner
 
 ## Prerequisites
-1. [Vagrant](http://downloads.vagrantup.com) installed
- - Requires [VirtualBox](https://www.virtualbox.org/wiki/Downloads) installed
-1. [Ruby](http://www.ruby-lang.org/en/downloads) installed 
-1. [Git](http://git-scm.com/downloads) installed  
-1. [Librarian-Chef](https://github.com/applicationsonline/librarian-chef) installed
+1. [Vagrant](http://downloads.vagrantup.com)
+ - Requires [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+1. [Ruby](http://www.ruby-lang.org/en/downloads)
+1. [Git](http://git-scm.com/downloads)
+1. [Librarian-Chef](https://github.com/applicationsonline/librarian-chef)
  - ```gem install librarian-chef```
-1. [Downloaded](https://www.adobe.com/cfusion/tdrc/index.cfm?product=coldfusion) 
+1. [Downloaded](https://www.adobe.com/cfusion/tdrc/index.cfm?product=coldfusion)
  - **32bit Linux ColdFusion 10** installer from Adobe 
  - copy to directory `/vagrant-cf10/ColdFusion_10_WWEJ_linux32.bin`
 
