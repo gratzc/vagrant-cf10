@@ -1,7 +1,11 @@
 #!/bin/bash
-echo add jenkins sources.list
+echo add jenkins to sources.list
 wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+echo add chrome to sources.list
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo deb http://dl.google.com/linux/chrome/deb/ stable main/ > /etc/apt/sources.list.d/google.list'
 
 echo update system
 sudo apt-get -qq -y update
@@ -9,6 +13,9 @@ sudo apt-get -qq -y update
 
 echo install jenkins
 sudo apt-get -qq -y install jenkins
+
+echo install chrome
+sudo apt-get -qq -y install google-chrome-stable
 
 # copy cloudy job
 
@@ -32,6 +39,7 @@ wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/violati
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/thinBackup.hpi
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/Surround-SCM-plugin.hpi
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/checkstyle.hpi
+wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/performance.hpi
 
 echo restart jenkins
 service jenkins restart
