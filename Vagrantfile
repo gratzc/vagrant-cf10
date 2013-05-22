@@ -27,6 +27,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "apache2::mod_ssl"
     chef.add_recipe "coldfusion10"
     chef.add_recipe "coldfusion10::apache"
+    chef.add_recipe "CFSelenium"
     chef.add_recipe "cloudy"
     chef.add_recipe "mxunit"
     chef.add_recipe "varscoper"
@@ -52,9 +53,9 @@ Vagrant::Config.run do |config|
     }
   end
 
-  if !File.exists?( File.expand_path "'installed_jenkins.txt'" )
-    config.vm.provision :shell, :path => "install_jenkins.sh"
-    File.open('installed_jenkins.txt', 'w') { |file| file.write("installed") }
+  if !File.exists?( File.expand_path "'/vagrant/installed_jenkins.txt'" )
+    config.vm.provision :shell, :path => "/vagrant/install_jenkins.sh"
+    File.open('/vagrant/installed_jenkins.txt', 'w') { |file| file.write("installed") }
   end
 
 end
