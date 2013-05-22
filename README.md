@@ -10,7 +10,6 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 - Apache
 - VIM
 - Git
-- Subversion
 - ANT
 - MxUnit
 - Cloudy with a Chance of Tests
