@@ -14,6 +14,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 - MxUnit
 - Cloudy with a Chance of Tests
 - CFQuery Param Scanner
+- CFSelenium
 - VarScope Scanner
 
 ## Prerequisites
