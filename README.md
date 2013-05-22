@@ -37,7 +37,7 @@ This is a [Vagrant](http://vagrantup.com) project for [ColdFusion 10](http://www
 ```
 
 ## Quick Usage ( ANT )
- Copy your code to your **web root** ```/vagrant-cf10/wwwroot``` 
+ Copy your code to your **web root** ```/home/mhenke/github/vagrant-cf10/``` 
 ```
 	$ vagrant ssh
 	$ cd /vagrant/wwwroot
@@ -63,7 +63,7 @@ The cloudy job is already to go. This build has mxunit ( unit and accpetance tes
 1. Run ```vagrant up```
 
 ## Important File Paths
-1. Your **web root** is a shared mapping on your host such as ```/vagrant-cf10/wwwroot```
+1. Your **web root** is a shared mapping on your host such as ```/home/mhenke/github/vagrant-cf10/```
 1. When ```vagrant ssh``` into your instance, the web root is ```/vagrant/wwwroot```
 
 ## Important URLs
