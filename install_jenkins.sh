@@ -20,7 +20,6 @@ sudo apt-get -qq -y install google-chrome-stable
 # copy cloudy job
 
 echo install plugins
-wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/violations.hpi
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/warnings.hpi
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/analysis-core.hpi
 wget -q -P /var/lib/jenkins/plugins http://updates.jenkins-ci.org/latest/dry.hpi
