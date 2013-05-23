@@ -17,6 +17,9 @@ sudo apt-get -qq -y install jenkins
 echo install chrome
 sudo apt-get -qq -y install google-chrome-stable
 
+echo install jmeter
+sudo apt-get -qq -y install jmeter
+
 # copy cloudy job
 
 echo install plugins
