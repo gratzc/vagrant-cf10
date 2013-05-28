@@ -52,7 +52,6 @@ Vagrant::Config.run do |config|
 
   if !File.exists?( "installed_jenkins.txt" )
     config.vm.provision :shell, :path => "install_jenkins.sh"
-    File.open('installed_jenkins.txt', 'w') { |file| file.write("installed") }
   end
 
 end
