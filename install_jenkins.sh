@@ -51,3 +51,6 @@ sudo chmod 777 -R /var/lib/jenkins/plugins
 
 echo fix permissions issue with WEB-INF/cfclasses
 sudo chmod 777 /opt/coldfusion10/cfusion/wwwroot/WEB-INF/cfclasses/
+
+echo create install_jenkins.txt
+touch /vagrant/install_jenkins.txt
