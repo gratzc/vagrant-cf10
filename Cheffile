@@ -2,19 +2,16 @@
 #^syntax detection
 
 site 'http://community.opscode.com/api/v1'
-
+cookbook 'apache2'
 cookbook 'apt'
-cookbook 'ark', '0.1.0'
-cookbook 'ant'
+cookbook 'coldfusion10', :git => 'https://github.com/wharton/chef-coldfusion10.git'
+cookbook 'java'
+cookbook 'rng-tools'
 cookbook 'git'
 cookbook 'vim' 
 cookbook 'zip'
-cookbook 'java'
-cookbook 'apache2'
-cookbook 'coldfusion10', :git => 'https://github.com/wharton/chef-coldfusion10.git', :ref => '01a4453e4f3204da819e74b6004ff0d909199bc5'
 cookbook 'mxunit', :git => 'https://github.com/wharton/chef-mxunit.git'
 cookbook 'cloudy', :git => 'https://github.com/mhenke/Cloudy-With-A-Chance-Of-Tests-Chef.git'
 cookbook 'varscoper', :git => 'https://github.com/mhenke/chef-varscoper.git'
 cookbook 'qpscanner', :git => 'https://github.com/mhenke/chef-cfqueryparam.git'
 cookbook 'CFSelenium', :git => 'https://github.com/mhenke/chef-cfselenium.git'
-#cookbook 'jenkins'
