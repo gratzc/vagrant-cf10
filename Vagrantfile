@@ -25,10 +25,6 @@ Vagrant::Config.run do |config|
     chef.add_recipe "coldfusion10::apache"
     chef.add_recipe "git"
     chef.add_recipe "vim"
-    chef.add_recipe "CFSelenium"
-    chef.add_recipe "cloudy"
-    chef.add_recipe "varscoper"
-    chef.add_recipe "qpscanner"
 
     chef.json = {
 
