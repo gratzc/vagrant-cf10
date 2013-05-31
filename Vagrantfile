@@ -19,6 +19,8 @@ Vagrant::Config.run do |config|
     chef.add_recipe "apt"
     chef.add_recipe "rng-tools"
     chef.add_recipe "java"
+    chef.add_recipe "git"
+    chef.add_recipe "vim"
     chef.add_recipe "apache2"
     chef.add_recipe "apache2::mod_ssl"
     chef.add_recipe "coldfusion10"
