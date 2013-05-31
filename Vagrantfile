@@ -45,6 +45,7 @@ Vagrant::Config.run do |config|
 
       "java" => {
         
+      }
 
     }
 
