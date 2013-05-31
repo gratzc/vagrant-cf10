@@ -3,9 +3,9 @@ echo add jenkins to sources.list
 wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
 
-echo add chrome to sources.list
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo deb http://dl.google.com/linux/chrome/deb/ stable main/ > /etc/apt/sources.list.d/google.list'
+#echo add chrome to sources.list
+#wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+#sudo sh -c 'echo deb http://dl.google.com/linux/chrome/deb/ stable main/ > /etc/apt/sources.list.d/google.list'
 
 echo update system
 sudo apt-get -qq -y update
@@ -14,10 +14,10 @@ sudo apt-get -qq -y update
 echo install jenkins
 sudo apt-get -qq -y install jenkins
 
-echo install chrome
-sudo apt-get -qq -y install google-chrome-stable
+#echo install chrome
+#sudo apt-get -qq -y install google-chrome-stable
 
-echo install jmeter
+#echo install jmeter
 sudo apt-get -qq -y install jmeter
 
 echo install ant
