@@ -29,6 +29,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "cloudy"
     chef.add_recipe "qpscanner"
     chef.add_recipe "varscoper"
+    chef.add_recipe "CFSelenium"
 
     chef.json = {
 
@@ -47,6 +48,10 @@ Vagrant::Config.run do |config|
       }
 
     }
+
+    if !File.exists?( "installed_jenkins.txt" )
+      config.vm.provision :shell, :path => "install_jenkins.sh"
+    end
   end
 
 end
