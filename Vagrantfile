@@ -23,7 +23,7 @@ Vagrant::Config.run do |config|
     chef.add_recipe "vim"
     chef.add_recipe "apache2"
     chef.add_recipe "apache2::mod_ssl"
-    chef.add_recipe "coldfusion10"
+    chef.add_recipe "coldfusion10::default"
     chef.add_recipe "coldfusion10::apache"
     chef.add_recipe "mxunit"
     chef.add_recipe "cloudy"
@@ -44,8 +44,7 @@ Vagrant::Config.run do |config|
       },
 
       "java" => {
-              
-      }
+        
 
     }
 
