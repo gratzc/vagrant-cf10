@@ -3,6 +3,9 @@ echo add jenkins to sources.list
 wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
 
+echo fix permissions issue with WEB-INF/cfclasses
+sudo chmod 777 /opt/coldfusion10/cfusion/wwwroot/WEB-INF/cfclasses/
+
 #echo add chrome to sources.list
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 #sudo sh -c 'echo deb http://dl.google.com/linux/chrome/deb/ stable main/ > /etc/apt/sources.list.d/google.list'
@@ -51,9 +54,6 @@ service jenkins restart
 
 echo fix permissions on /var/lib/jenkins/plugins
 sudo chmod 777 -R /var/lib/jenkins/plugins
-
-echo fix permissions issue with WEB-INF/cfclasses
-sudo chmod 777 /opt/coldfusion10/cfusion/wwwroot/WEB-INF/cfclasses/
 
 echo create install_jenkins.txt
 touch /vagrant/install_jenkins.txt
