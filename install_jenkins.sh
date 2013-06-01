@@ -18,10 +18,10 @@ sudo apt-get -qq -y install jenkins
 #sudo apt-get -qq -y install google-chrome-stable
 
 #echo install jmeter
-sudo apt-get -qq -y install jmeter
+#sudo apt-get -qq -y install jmeter
 
-echo install ant
-sudo apt-get -qq -y install ant
+#echo install ant
+#sudo apt-get -qq -y install ant
 
 # copy cloudy job
 

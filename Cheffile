@@ -8,7 +8,6 @@ cookbook 'ant'
 cookbook 'ark',"0.1.0"
 cookbook 'coldfusion10', :git => 'https://github.com/wharton/chef-coldfusion10.git'
 cookbook 'java'
-cookbook 'rng-tools'
 cookbook 'git'
 cookbook 'vim' 
 cookbook 'zip'
